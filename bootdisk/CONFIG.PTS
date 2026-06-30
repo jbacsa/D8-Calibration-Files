@@ -1,0 +1,26 @@
+    CPU86 Force		=  $GerKeyboard
+    CPU286 Force	=  $Himem286,$GerKeyboard
+    CPU386+ Force	=  $Himem386,$GerKeyboard
+    break		=  Yes
+    screen		=  slow
+    DOS  		=  High Umb
+    clock		=  Real
+    files		=  77
+    cpu			=  Standard
+    shiftstate		=  Off
+    idtchk		=  OFF
+    softreboot		=  On
+    abort		=  On
+    LASTDRIVE		=  Z
+    Country		=  GR, 437, COUNTRY.SYS
+
+    [$Himem286]
+    device		=  himem286.sys
+
+    [$Himem386]
+    device		=  himem386.sys
+
+    [$GerKeyboard]
+    keyboard		=  GR PRELOAD ACTBORDER 56 DEFBORDER 0 HotKey 02 54
+
+

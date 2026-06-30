@@ -1,0 +1,73 @@
+Dear User !
+
+ This disk is working now under operating system PTSDOS 6.51CD. This disk 
+operating system created by russian company PARAGON. PTSDOS is fully 
+compatible to MS-DOS 6.22, MS Windows 3.1,MS Windows 3.11 and Novell 
+NetWare 3.x/4.x and with the majority of known DOS/Windows applications.
+
+ This disk contains only 3 system files for system booting up and SYS.COM 
+utility, which allows one to prepare bootable disk or to transfer the system
+to the hard disk, the old operating system being saved for later restoring 
+and usage. Using SYS.COM one can transfer system to a harddisk and evaluate
+FOR FREE the efficiency and reliability of our system.
+
+ Having a full version of PTSDOS you'll enjoy following extended features:
+
+þ Multilanguage support allows to have up to 8 keyboard layouts as well as
+  8 screen fonts simultaneously.
+
+þ PTSDOS directly supports harddisks with more than 1024 heads.
+
+þ Internal BOOT-manager provides the opportunity of parallel usage of 
+  more than one operating systems. 
+
+þ !! Internal CD-extension boosts the speed of reading the data from CD 
+  to 25% in comparison with MSCDEX.EXE.
+
+þ Dynamic data compression system - DATACOMP - has the compression rate 
+  1,2 times better than STACKER. Special VXD designed for  Windows 
+  raises the performance close to the speed of harddrive when 
+  working under Windows.
+
+þ DATACOMP allows to create compressed disk both on harddrives and floppy 
+  disks. Special floppy-drive formatting makes reading from 2 to 3 times 
+  faster especially on big files.
+
+þ Various binary code snippets, specially optimized for 286, 486, Pentium 
+  processors boosts perfomance up to 10% on 486 and Pentium processors 
+  againist MSDOS.
+
+þ Completely written in assembler, whole system fits on one bootable disk.
+
+In order to purchase DOS contact Paragon dealers:
+
+----------------------------------------------------------------------
+
+ RUSSIA -  Russian manuals ( 110 pages ),
+	   German\Russian\English versions are available
+	
+	Paragon/Russia - 141700 Russia, Dolgoprudnyj-Moscow, 
+			 Pervomaiskaja str. 21, #17
+			 
+			 tel: +7(095) 408-62-84
+			 fax: +7(095) 576-25-72
+
+       internet E-mail adres: paragon@glas.apc.org
+----------------------------------------------------------------------
+
+ POLAND -  English/Polish manuals (100 pages ), 
+	   English/Russian versions are available
+
+	Goldregen      - 42/200 Czestohowa, Al.NMP 11
+			 tel: +48(34) 24-69-63 	
+----------------------------------------------------------------------
+
+ GERMANY - full German manuals ( 350 pages ), 
+	   German/Russian versions are available
+
+	Gramespacher PC-programme,
+
+			 Germany, 53474 Ahrweiler, Joeresstr 10
+			 tel +49(2641) 90-03-05
+			 tel +49(2641) 90-03-06
+-----------------------------------------------------------------

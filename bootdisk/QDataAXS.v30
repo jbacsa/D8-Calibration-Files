@@ -1,0 +1,241 @@
+;***************************************************************************
+;
+;      QDATA File:   V3.0 file for QTERM-II with 24-key keypad
+;
+;***************************************************************************
+;
+;  Please note:
+;
+;		EVERY IDENTIFIER MUST REMAIN IN THIS FILE,
+;		AND THEIR ORDER MUST NOT BE CHANGED !!!!
+;
+;  If you have any questions about the format of this file, how to make
+;  changes, etc., please refer to Chapter 3 of the User's Manual.
+
+
+; [identifier]			value	Available values you can use:
+;--------------------		------	--------------------------------------
+[version]			v3.0	; DO NOT CHANGE THIS!
+[display size]			4,20	; row,column
+[display duty cycle]		dc1/16	; dc1/8, dc1/11, or dc1/16
+[lambda offset]			5,60	; Normal LCD: 5,60; Wide-temp: 30,95
+
+[baud rate]			9600	; 9600,4800,2400,1200,600,300,150
+[data format]			df8n1	; df8n1,df8n2,df8o1,df8o2,df8e1,df8e2
+					; df7n1,df7n2,df7o1,df7o2,df7e1,df7e2
+
+[tab spacing]			4	; 0 to 19 (0 disables tabs)
+[contrast]			63	; 0 to 63 (bigger = darker)
+					; add 128 to allow contrast adjust
+					; to override disabled power-on setup
+
+[cursor mode]			underln	; block, underln, both, none
+[shift mode]			lock	; function, lock
+[insert/replace mode]		replace	; replace, insert
+
+[auto wrap mode]		on	; on, off
+[auto scroll mode]		on	; on, off
+[auto line feed mode]		on	; on, off
+[key repeat mode] 		on	; on, off
+[key click mode] 		on	; on, off
+[backlight mode] 		off	; on, off
+[shift LED mode] 		on 	; on, off
+[xon/xoff mode]			on	; on, off
+[pwr-on setup mode]		on	; on, off
+[qdata retrieve mode]		on	; on, off
+
+[timeout duration]		0	; 0 to 63 in 20 s increments
+					;  (0 = disable timeout) 
+[buzzer duration]		10	; 1 to 63 in 50 ms increments
+					;  (10 * 50 ms = 500 ms)
+[key-click duration]		1	; 1 to 63 in 50 ms increments
+					;  (1 * 50mS = 50 ms)
+[LED-blink rate]		2	; 1 to 63 in 50 ms increments
+					;  (2 * 50 ms = 100 ms)
+[key-repeat rate]		2	; 1 to 63 in 50 ms increments
+					;  (2 * 50 ms = 100 ms)
+
+[shift-key location]		k53	; Shift key position, or "none"
+					; See below for format of key
+					; specification.
+
+;***************************************************************************
+;  Custom Display Character Definitions:
+
+[display-character definitions]
+
+;      	Char# 	Code 	Bit-map Definition
+;	===== 	==== 	===============================
+	<c0>	x00	x04,x0E,x15,x04,x04,x04,x04,x04	; up-pointing arrow
+	<c1>	x01	x04,x04,x04,x04,x04,x15,x0e,x04	; down-pointing arrow
+	<c2>	x02	x00,x10,x08,x04,x02,x01,x00,x00	; backward slash
+	<c3>	x03	x08,x15,x02,x00,x00,x00,x00,x00	; tilde (~)
+	<c4>	x04	x1C,x10,x18,x10,x1F,x04,x04,x07	; "escape" char symbol
+	<c5>	x05	x04,x04,x1F,x04,x04,x00,x1F,x00	; plus/minus symbol
+	<c6>	x06	x0E,x0E,x04,x1F,x15,x04,x1F,x11	; human figure
+	<c7>	x1C	x04,x00,x04,x08,x10,x11,x0E,x00	; Spanish ?
+
+;***************************************************************************
+;  Individual Key Repeat Mode Assignments:
+;
+;  The mode can be either "on" or "off".
+
+[individual key repeat modes]
+
+; unshifted keys
+
+; Row 0
+	<k00>on <k01>on <k02>on <k03>on <k04>on <k05>on
+; Row 1
+	<k10>on <k11>on <k12>on <k13>on <k14>on <k15>on
+; Row 2
+	<k20>on <k21>on <k22>on <k23>on <k24>on <k25>on
+; Row 3
+	<k30>on <k31>on <k32>on <k33>on <k34>on <k35>on
+; Row 4
+	<k40>on <k41>on <k42>on <k43>on <k44>on <k45>on
+; Row 5
+	<k50>on <k51>on <k52>on <k53>OFF <k54>on <k55>on
+; Row 6
+	<k60>on <k61>on <k62>on <k63>on <k64>on <k65>on
+; Row 7
+	<k70>on <k71>on <k72>on <k73>on <k74>on <k75>on
+
+; shifted keys
+
+; Row 0
+	<sk00>on <sk01>on <sk02>on <sk03>on <sk04>on <sk05>on
+; Row 1
+	<sk10>on <sk11>on <sk12>on <sk13>on <sk14>on <sk15>on
+; Row 2
+	<sk20>on <sk21>on <sk22>on <sk23>on <sk24>on <sk25>on
+; Row 3
+	<sk30>on <sk31>on <sk32>on <sk33>on <sk34>on <sk35>on
+; Row 4
+	<sk40>on <sk41>on <sk42>on <sk43>on <sk44>on <sk45>on
+; Row 5
+	<sk50>on <sk51>on <sk52>on <sk53>OFF <sk54>on <sk55>on
+; Row 6
+	<sk60>on <sk61>on <sk62>on <sk63>on <sk64>on <sk65>on
+; Row 7
+	<sk70>on <sk71>on <sk72>on <sk73>on <sk74>on <sk75>on
+
+;***************************************************************************
+;  Key Pressed/Released String Assignments:
+
+[keypad-character definitions]
+
+; unshifted key-pressed strings
+
+;Row 0 (gaw changes: 'f' -> 'p')
+	<k00>'p4'	<k01>'p3'	<k02>'p2'
+	<k03>'p1'	<k04>		<k05>
+;Row 1 (gaw changes: k10 & k11 switched, 'f' -> 'p')
+	<k10>x18	<k11>x19	<k12>'p6'
+	<k13>'p5'	<k14>		<k15>
+;Row 2
+	<k20>'9'	<k21>'8'	<k22>'7'
+	<k23>'H'	<k24>		<k25>
+;Row 3
+	<k30>'6'	<k31>'5'	<k32>'4'
+	<k33>','	<k34>		<k35>
+;Row 4
+	<k40>'3'	<k41>'2'	<k42>'1'
+	<k43>'.'	<k44>		<k45>
+;Row 5
+	<k50>x0D	<k51>'0'	<k52>x7F
+	<k53>		<k54>		<k55>
+;Row 6
+	<k60>		<k61>		<k62>
+	<k63>		<k64>		<k65>
+;Row 7
+	<k70>		<k71>		<k72>
+	<k73>		<k74>		<k75>
+
+; shifted key-pressed strings
+
+;Row 0
+	<sk00>'P4'	<sk01>'P3'	<sk02>'P2'
+	<sk03>'P1'	<sk04>  	<sk05>
+;Row 1
+	<sk10>'F4'	<sk11>'F3'	<sk12>'F2'
+	<sk13>'F1'	<sk14>		<sk15>
+;Row 2
+	<sk20>'c'	<sk21>'b'	<sk22>'a'
+	<sk23>x1B	<sk24>  	<sk25>
+;Row 3
+	<sk30>'f'	<sk31>'e'	<sk32>'d'
+	<sk33>'-'	<sk34>  	<sk35>
+;Row 4 (gaw changes to sk40, sk41 & sk42)
+	<sk40>'3'	<sk41>'2'	<sk42>'1'
+	<sk43>'+'	<sk44>  	<sk45>
+;Row 5
+	<sk50>x0D	<sk51>'0'	<sk52>x7F
+	<sk53>		<sk54>  	<sk55>
+;Row 6
+	<sk60>		<sk61>		<sk62>
+	<sk63>		<sk64>		<sk65>
+;Row 7
+	<sk70>		<sk71>		<sk72>
+	<sk73>		<sk74>		<sk75>
+
+; unshifted key-released strings
+
+;Row 0
+	<kr00>		<kr01>		<kr02>
+	<kr03>		<kr04>		<kr05>
+;Row 1 (gaw changes: added up/down key releases)
+	<kr10>'s'	<kr11>'s'	<kr12>
+	<kr13>		<kr14>		<kr15>
+;Row 2
+	<kr20>		<kr21>		<kr22>
+	<kr23>		<kr24>		<kr25>
+;Row 3
+	<kr30>		<kr31>		<kr32>
+	<kr33>		<kr34>		<kr35>
+;Row 4
+	<kr40>		<kr41>		<kr42>
+	<kr43>		<kr44>		<kr45>
+;Row 5
+	<kr50>		<kr51>		<kr52>
+	<kr53>		<kr54>		<kr55>
+;Row 6
+	<kr60>		<kr61>		<kr62>
+	<kr63>		<kr64>		<kr65>
+;Row 7
+	<kr70>		<kr71>		<kr72>
+	<kr73>		<kr74>		<kr75>
+
+; shifted key-released strings
+
+;Row 0
+	<skr00>		<skr01>		<skr02>
+	<skr03>		<skr04>		<skr05>
+;Row 1
+	<skr10>		<skr11>		<skr12>
+	<skr13>		<skr14>		<skr15>
+;Row 2
+	<skr20>		<skr21>		<skr22>
+	<skr23>		<skr24>		<skr25>
+;Row 3
+	<skr30>		<skr31>		<skr32>
+	<skr33>		<skr34>		<skr35>
+;Row 4
+	<skr40>		<skr41>		<skr42>
+	<skr43>		<skr44>		<skr45>
+;Row 5
+	<skr50>		<skr51>		<skr52>
+	<skr53>		<skr54>		<skr55>
+;Row 6
+	<skr60>		<skr61>		<skr62>
+	<skr63>		<skr64>		<skr65>
+;Row 7
+	<skr70>		<skr71>		<skr72>
+	<skr73>		<skr74>		<skr75>
+
+;***************************************************************************
+;  User Data String Definition:
+
+[user-data definition]	'QTERM Data-Entry Terminal'
+
+[end] ; That's all.
