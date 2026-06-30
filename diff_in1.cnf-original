@@ -1,0 +1,1820 @@
+[File Information]
+sVersion=Version 2.25 of Diffractometer Configuration Program
+sDate=Tuesday, June 20, 2006
+sProject=D8-Project
+
+[Basic Diffractometer Settings]
+sUser=Emory University
+sCompany=Emory University
+sSite=Atlanta, GA USA
+sDiffractometerType=D8
+sGoniometerType=TH/TH
+sStage=Quarter Cradle
+fDiameter=500
+iDeviceCRC=CCCD
+sPSDDeviceMD5=0ECC578529689327179AE7870CFC9486
+sD8GonioType=A20
+sFWDeviceIDforGADDS=D8
+sSynchMotorAxes=None
+iAIBType=1
+iInterruptRequestNumber=5
+
+[Sample Changer]
+sChanger=None
+iMaxPos=
+
+[Matic Settings]
+sStatus=not used
+fXPosOfLock=0
+fXPosOfSampleColA=0
+fXDistanceBetwColumns=0
+iXNumberOfColumns=0
+fXTranslate=0
+fXFastVelocity=0
+fYPosOfLock=0
+fYPosOfSampleRow1=0
+fYDistanceBetwRows=0
+iYNumberOfRows=0
+fYTranslate=0
+fYFastVelocity=0
+fRestXPos=0
+fRestYPos=0
+fBelt1XPos=0
+fBelt1YPos=0
+fBelt2XPos=0
+fBelt2YPos=0
+fBelt3XPos=0
+fBelt3YPos=0
+fBelt4XPos=0
+fBelt4YPos=0
+fBelt5XPos=0
+fBelt5YPos=0
+sSampleWithCup=no
+sExcludedPositions=
+sReservedPositions=
+sAXSCOMPositions=
+
+[D4 Matic Settings]
+sStatus=not used
+fXPosAtRest=0
+fYPosAtRest=0
+fZPosAtRest=0
+fLiftLowerRestPos=0
+fLiftUpperRestPos=190
+fLiftOvertravel=1.5
+fThetaLoadPos=0
+f2ThetaLoadPos=0
+sStandardGrabber=electric magnet
+fXPosOfExtSampleHandler=0
+fYPosOfExtSampleHandler=0
+fZPosOfExtSampleHandler=0
+fXPosOfSampleInput=0
+fYPosOfSampleInput=0
+fZPosOfSampleInput=0
+fZOffsetSampleMagazine=0
+fLiftMeasPosition=0
+sMagazineName=Standard
+iNoMagazineareas=1
+sSpinningAllowed=yes
+
+[Fixed Beam Optics]
+sMonochromatorType=None
+sPrimarySollerSlit=installed
+fPrimarySollerSlit=2.5
+sDivSlit=not installed
+fDivSlit=0
+sNearSampleSlit=not installed
+fNearSampleSlit=0
+sAnalyzerType=None
+sBetaFilter=not installed
+fKBetaFilterRatio=0.5
+sRadialSoller=installed
+sSecondarySollerSlit=not installed
+fSecondarySollerSlit=2.5
+sDetectorSlit=not installed
+fDetectorSlit=20.01
+sThinFilmAttachment=not installed
+fThinFilmAttachment=0.35
+sAntiscatterSlit=not installed
+fAntiscatterSlit=12.35
+
+[Diffracted Beam Optic 1]
+sStatus=used
+sName=Default Optic
+sOffsetDrive=2Theta
+iNumBeamPaths=1
+sBeampath1=Standard
+fOffset1=0
+
+[Diffracted Beam Optic 2]
+sStatus=not used
+sName=Two Bounce Analyzer
+sOffsetDrive=2Theta
+iNumBeamPaths=2
+sBeampath1=Double Ge220 Analyzer
+fOffset1=0
+sBeampath2=Between Crystal
+fOffset2=0
+
+[Diffracted Beam Optic 4]
+sStatus=not used
+sName=Bond Detector Holder
+sOffsetDrive=2Theta
+iNumBeamPaths=1
+sBeampath1=Standard
+fOffset1=0
+
+[Incident Beam Optic 1]
+sStatus=used
+sName=Default Optic
+sOperatesInterlockSwitch=yes
+sOffsetDrive=2Theta
+sOffsetDrive2=Theta
+iNumBeamPaths=1
+sBeampath1=Standard
+fOffset1=0
+fDrive2Offset1=0
+
+[Generator]
+sType=K780
+fMinVoltage=20
+fMaxVoltage=50
+fDefaultVoltage=35
+fDefaultCurrent=40
+fStandbyCurrent=5
+fStandbyDelay=1800
+fStandbyVoltage=20
+fMinCurrent=5
+fMaxCurrent=50
+fMaxPower=1.8
+fWarmUpDelay=300
+sFilamentDimensions=
+sFilamentOrientation=
+
+[Water Cooling Unit]
+sStatus=used
+bGeneratorControlled=no
+sTempCtrlType=DwcNoCtrl
+sPIDUsed=no
+fCp=0
+fCi=0
+fCd=0
+fTempWarning1=0
+fTempWarning2=0
+fTempAlarm=0
+fFlowWarning1=3.5
+fFlowWarning2=4
+fFlowAlarm=3.5
+fCondWarning1=0
+fCondWarning2=0
+fCondAlarm=0
+fXFlowSensorKFactor=640
+fXFlowSensorConversionFactor=0.0028
+
+[Tube Window 1]
+sWindowType=Low Speed Shutter
+
+[Wavelengths]
+sElement=Co
+fAlphaAverage=1.79026
+fAlpha1=1.78897
+fAlpha2=1.79285
+fBeta=1.62079
+fAlphaRatio=0.5
+
+[Detector Interface Board 1]
+sStatus=used
+sDetector=Scintillation Counter
+sTTLDetector=None
+sBaseAddress=140
+
+[Detector 1]
+sStatus=used
+sDetectorType=Scintillation Counter
+sNIMElectronic=not used
+fHighVoltage=822.6
+fAmplifierGain=80
+sLineShiftCorrection=off
+sDisc1Status=used
+fDiscrim1LowerLevel=0.788
+fDiscrim1WindowWidth=1.078
+sDisc2Status=not used
+fDiscrim2LowerLevel=0.5
+fDiscrim2WindowWidth=1
+fMaxHighVoltage=1200
+fMinHighVoltage=100
+iPulseShaping=3
+sConstDeadTime=minimized
+sPileUpTime=deactivated
+fPileUpTime=0
+sTLPDStatus=deactivated
+
+[Detector Interface Board 2]
+sStatus=not used
+sDetector=None
+sTTLDetector=None
+sBaseAddress=
+
+[Detector 2]
+sStatus=not used
+sDetectorType=None
+sNIMElectronic=not used
+fHighVoltage=0
+fAmplifierGain=0
+sLineShiftCorrection=off
+sDisc1Status=not used
+fDiscrim1LowerLevel=0
+fDiscrim1WindowWidth=0
+sDisc2Status=not used
+fDiscrim2LowerLevel=0
+fDiscrim2WindowWidth=0
+fMaxHighVoltage=0
+fMinHighVoltage=0
+iPulseShaping=
+sConstDeadTime=
+sPileUpTime=deactivated
+fPileUpTime=0
+sTLPDStatus=deactivated
+
+[Detector Interface Board 3]
+sStatus=not used
+sDetector=None
+sTTLDetector=None
+sBaseAddress=
+
+[Detector 3]
+sStatus=not used
+sDetectorType=None
+sNIMElectronic=not used
+fHighVoltage=0
+fAmplifierGain=0
+sLineShiftCorrection=off
+sDisc1Status=not used
+fDiscrim1LowerLevel=0
+fDiscrim1WindowWidth=0
+sDisc2Status=not used
+fDiscrim2LowerLevel=0
+fDiscrim2WindowWidth=0
+fMaxHighVoltage=0
+fMinHighVoltage=0
+iPulseShaping=
+sConstDeadTime=
+sPileUpTime=deactivated
+fPileUpTime=0
+sTLPDStatus=deactivated
+
+[Detector Interface Board 4]
+sStatus=not used
+sDetector=None
+sTTLDetector=None
+sBaseAddress=
+
+[Detector 4]
+sStatus=not used
+sDetectorType=None
+sNIMElectronic=not used
+fHighVoltage=0
+fAmplifierGain=0
+sLineShiftCorrection=off
+sDisc1Status=not used
+fDiscrim1LowerLevel=0
+fDiscrim1WindowWidth=0
+sDisc2Status=not used
+fDiscrim2LowerLevel=0
+fDiscrim2WindowWidth=0
+fMaxHighVoltage=0
+fMinHighVoltage=0
+iPulseShaping=
+sConstDeadTime=
+sPileUpTime=deactivated
+fPileUpTime=0
+sTLPDStatus=deactivated
+
+[Position Sensitive Detector]
+sStatus=used
+sPSDType=VANTEC-1
+fAngularRange=5
+fResolution1=0.0071873
+fZeroOffset1=-5.55663
+fFSLowerDispLimit1=425
+fFSUpperDispLimit1=1122
+iXLeftLowerThres=100
+iXLeftUpperThres=600
+iXRightLowerThres=100
+iXRightUpperThres=600
+iGridLowerThres=75
+iGridUpperThres=599
+sFDCType=internal
+fLowerDispLimit1=0
+fUpperDispLimit1=2047
+iVoltage1=4500
+iMinVoltage1=0
+iMaxVoltage1=10000
+iVoltage2=5605
+iMinVoltage2=0
+iMaxVoltage2=6500
+iRCSwitches=8
+sF1InitString=$1F000E,$1A1FAF,$18FFFF,$12406A,$15406A,$17FFC0
+fF1Resolution=120.301
+iTDCSwitches=2170300
+fDithering=420
+iFDCTransFreq=15
+fDelayLineX=93004.5
+iTimeScaleX=3
+iTimeScaleXFract=8
+fDelayCompXLeft=1506
+fDelayCompXRight=1701
+fDelayCompGrid=0
+fSignalPatternTWC=60000
+fEventTWCX=11500
+iSparkDetection=75
+iSparkSuppression=3000000
+fPSDDistAntisc=110.8
+fPSDDistDet=21.3
+fPSDCalcPreferredDivergence=0.1
+sAutoConfDrive=yes
+vCalibration=16.3435,2.17046;47.2153,1.57177;78.0234,1.03681;107.753,1.58035;137.129,2.47742;166.907,2.97312;197.314,2.83923;227.821,2.60502;258.512,2.18755;289.035,1.93776;319.787,1.45835;350.487,1.0311;380.979,0.812548;411.648,0.416392;442.062,0.276355;472.65,-0.0392905;503.037,-0.153075;533.135,0.0227323;545.359,-0.0918318;557.542,-0.166447;569.649,-0.163795;582.081,-0.486394;594.103,-0.399366;606.399,-0.586285;618.22,-0.297613;630.586,-0.554356;642.654,-0.512811;654.936,-0.685608;667.181,-0.822047;679.24,-0.771787;690.854,-0.276244;703.026,-0.339076;714.946,-0.149896;726.927,-0.0214229;739.066,-0.0512071;751.347,-0.22263;763.39,-0.15711;776.006,-0.663592;787.842,-0.390518;800.384,-0.822518;812.84,-1.16932;824.671,-0.891054;836.872,-0.983268;848.929,-0.930493;860.598,-0.49095;872.612,-0.395527;884.564,-0.237958;896.595,-0.1601;909.014,-0.469712;921.167,-0.512859;933.262,-0.499155;945.488,-0.616188;957.361,-0.379076;969.474,-0.38276;981.579,-0.378607;993.538,-0.229007;1005.64,-0.224148;1017.75,-0.225259;1047.87,-0.0655397;1077.91,0.166394;1108.07,0.272385;1137.82,0.797586;1168.04,0.852125;1198.21,0.953976;1228.22,1.21934;1258.26,1.44865;1288.24,1.74843;1318.19,2.07105;1348.04,2.49024;1377.46,3.34852;1406.42,4.6557;1434.83,6.51999;1463.26,8.36481;1492,9.89626;1521,11.1737
+
+[Area Detector 1]
+sStatus=not used
+sPSDType=
+iEnableOutputType=0
+iEnableOutputLine=3
+iEnableOutputLogic=0
+
+[Collision Limits 1]
+sStatus=not used
+sDrive1=Unknown Drive
+sDrive2=Unknown Drive
+fLowerLimit=0
+fUpperLimit=0
+bDirMovement=same
+
+[Collision Limits 2]
+sStatus=not used
+sDrive1=Unknown Drive
+sDrive2=Unknown Drive
+fLowerLimit=0
+fUpperLimit=0
+bDirMovement=same
+
+[Collision Limits 3]
+sStatus=not used
+sDrive1=Unknown Drive
+sDrive2=Unknown Drive
+fLowerLimit=0
+fUpperLimit=0
+bDirMovement=same
+
+[Collision Limits 4]
+sStatus=not used
+sDrive1=Unknown Drive
+sDrive2=Unknown Drive
+fLowerLimit=0
+fUpperLimit=0
+bDirMovement=same
+
+[Drive 1]
+sStatus=used
+sExternalEncoder=None
+sModulus=deactivated
+sDriveName=Theta
+iDriveNo=1
+sDriveUnit=deg.
+sDriveControl=Software
+fReferencePosition=19.8658
+fLowerLimit=-2
+fUpperLimit=60
+iMotorType=1
+fTranslate=2500
+fMechanicalGear=1
+fEncoderCounts=5000
+fSlowSpeed=40
+fFastSpeed=400
+fFullSteps=200
+iMicroSteps=50
+fAccelerationTime=2
+fPhaseCurrent=4
+iPositioningError=0.01
+fResolution=0.0001
+iFWManualDriveNumber=0
+sFWManualDriveName=TH-Tube
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=30
+uConfB=100
+uConfX=5078
+fCCP=8
+fCCI=0.05
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 2]
+sStatus=used
+sExternalEncoder=None
+sModulus=deactivated
+sDriveName=2Theta
+iDriveNo=2
+sDriveUnit=deg.
+sDriveControl=Software
+fReferencePosition=23.3148
+fLowerLimit=-2
+fUpperLimit=120.1
+iMotorType=1
+fTranslate=2500
+fMechanicalGear=1
+fEncoderCounts=5000
+fSlowSpeed=40
+fFastSpeed=400
+fFullSteps=200
+iMicroSteps=50
+fAccelerationTime=2
+fPhaseCurrent=4
+iPositioningError=0.01
+fResolution=0.0001
+iFWManualDriveNumber=0
+sFWManualDriveName=TH-Detector
+fMotorPulsesPerUnit=3200
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=830
+uConfB=ED00
+uConfX=5078
+fCCP=8
+fCCI=0.05
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 3]
+sStatus=used
+sDriveName=Phi
+sExternalEncoder=None
+sModulus=deactivated
+iDriveNo=3
+sDriveUnit=deg.
+sDriveControl=Software
+fReferencePosition=64.0935
+fLowerLimit=-190
+fUpperLimit=190
+iMotorType=1
+fTranslate=0.25
+fMechanicalGear=2
+fEncoderCounts=1
+fSlowSpeed=200
+fFastSpeed=1200
+fFullSteps=200
+iMicroSteps=5
+fAccelerationTime=0.2
+fPhaseCurrent=0.9
+iPositioningError=0
+fResolution=0.0002
+iFWManualDriveNumber=0
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=688
+uConfB=0
+uConfX=5101
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 4]
+sStatus=used
+sExternalEncoder=None
+sModulus=deactivated
+sDriveName=Chi
+iDriveNo=4
+sDriveUnit=deg.
+sDriveControl=Software
+fReferencePosition=-11.965
+fLowerLimit=-11
+fUpperLimit=90.1
+iMotorType=1
+fTranslate=2.5
+fMechanicalGear=0.2
+fEncoderCounts=1
+fSlowSpeed=60
+fFastSpeed=180
+fFullSteps=200
+iMicroSteps=5
+fAccelerationTime=0.5
+fPhaseCurrent=0.9
+iPositioningError=0
+fResolution=0.0002
+iFWManualDriveNumber=0
+sFWManualDriveName=Psi
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=A30
+uConfB=0
+uConfX=4360
+fCCP=20
+fCCI=0
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 5]
+sStatus=used
+sExternalEncoder=None
+sDriveName=X-Drive
+iDriveNo=5
+sDriveUnit=mm
+sDriveControl=Software
+fReferencePosition=-41.438
+fLowerLimit=-40
+fUpperLimit=40
+iMotorType=1
+fTranslate=0.5
+fMechanicalGear=1
+fEncoderCounts=1
+fSlowSpeed=5
+fFastSpeed=10
+fFullSteps=200
+iMicroSteps=5
+fAccelerationTime=1
+fPhaseCurrent=0.9
+iPositioningError=0.2
+fResolution=0.001
+fXTranslAmplitude=0
+iFWManualDriveNumber=0
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=8B8
+uConfB=0
+uConfX=9360
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 6]
+sStatus=used
+sExternalEncoder=None
+sDriveName=Y-Drive
+iDriveNo=6
+sDriveUnit=mm
+sDriveControl=Software
+fReferencePosition=-40.618
+fLowerLimit=-40
+fUpperLimit=40
+iMotorType=1
+fTranslate=0.5
+fMechanicalGear=1
+fEncoderCounts=1
+fSlowSpeed=5
+fFastSpeed=10
+fFullSteps=200
+iMicroSteps=5
+fAccelerationTime=1
+fPhaseCurrent=0.9
+iPositioningError=0.2
+fResolution=0.001
+iFWManualDriveNumber=0
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=8B8
+uConfB=0
+uConfX=9360
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 7]
+sStatus=used
+sExternalEncoder=None
+sDriveName=Z-Drive
+iDriveNo=7
+sDriveUnit=mm
+sDriveControl=Software
+fReferencePosition=-1.2712
+fLowerLimit=-1.6
+fUpperLimit=2.6
+iMotorType=1
+fTranslate=1
+fMechanicalGear=0.5
+fEncoderCounts=1
+fSlowSpeed=0.1
+fFastSpeed=1
+fFullSteps=200
+iMicroSteps=5
+fAccelerationTime=0.2
+fPhaseCurrent=0.9
+iPositioningError=0
+fResolution=0.0005
+iFWManualDriveNumber=0
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=838
+uConfB=0
+uConfX=9360
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 8]
+sStatus=used
+sExternalEncoder=None
+fFocalLength=88
+sDriveName=Divergence Slit
+iDriveNo=9
+sDriveUnit=step
+sDriveControl=Software
+fReferencePosition=185
+fLowerLimit=-1
+fUpperLimit=201
+iMotorType=1
+fTranslate=0.0025
+fMechanicalGear=200
+fEncoderCounts=1
+fSlowSpeed=100
+fFastSpeed=200
+fFullSteps=200
+iMicroSteps=5
+fAccelerationTime=1
+fPhaseCurrent=0.3
+iPositioningError=40
+fResolution=0.2
+iFWManualDriveNumber=9
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=238
+uConfB=0
+uConfX=1001
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 9]
+sStatus=used
+sExternalEncoder=None
+fFocalLength=88
+sDriveName=Antiscattering Slit
+iDriveNo=10
+sDriveUnit=step
+sDriveControl=Software
+fReferencePosition=185
+fLowerLimit=-1
+fUpperLimit=201
+iMotorType=1
+fTranslate=0.0025
+fMechanicalGear=200
+fEncoderCounts=1
+fSlowSpeed=100
+fFastSpeed=200
+fFullSteps=200
+iMicroSteps=5
+fAccelerationTime=1
+fPhaseCurrent=0.3
+iPositioningError=40
+fResolution=0.2
+iFWManualDriveNumber=10
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=238
+uConfB=0
+uConfX=1001
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 10]
+sStatus=not used
+sExternalEncoder=None
+sDriveName=Sample Changer X
+iDriveNo=0
+sDriveUnit=deg.
+sDriveControl=Firmware
+fReferencePosition=0
+fLowerLimit=0
+fUpperLimit=0
+iMotorType=1
+fTranslate=0.5
+fMechanicalGear=1
+fEncoderCounts=1
+fSlowSpeed=10
+fFastSpeed=100
+fFullSteps=200
+iMicroSteps=50
+fAccelerationTime=1
+fPhaseCurrent=0
+iPositioningError=0
+fResolution=0.0001
+iFWManualDriveNumber=0
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=38
+uConfB=0
+uConfX=5001
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 11]
+sStatus=not used
+sExternalEncoder=None
+sDriveName=Sample Changer Y
+iDriveNo=0
+sDriveUnit=deg.
+sDriveControl=Firmware
+fReferencePosition=0
+fLowerLimit=0
+fUpperLimit=0
+iMotorType=1
+fTranslate=0.5
+fMechanicalGear=1
+fEncoderCounts=1
+fSlowSpeed=10
+fFastSpeed=100
+fFullSteps=200
+iMicroSteps=50
+fAccelerationTime=1
+fPhaseCurrent=0
+iPositioningError=0
+fResolution=0.0001
+iFWManualDriveNumber=0
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=38
+uConfB=0
+uConfX=5001
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 12]
+sStatus=not used
+sExternalEncoder=None
+sDriveName=Sample Changer Z
+iDriveNo=0
+sDriveUnit=deg.
+sDriveControl=Firmware
+fReferencePosition=0
+fLowerLimit=0
+fUpperLimit=0
+iMotorType=1
+fTranslate=0.5
+fMechanicalGear=1
+fEncoderCounts=1
+fSlowSpeed=10
+fFastSpeed=100
+fFullSteps=200
+iMicroSteps=50
+fAccelerationTime=1
+fPhaseCurrent=0
+iPositioningError=0
+fResolution=0.0001
+iFWManualDriveNumber=0
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=38
+uConfB=0
+uConfX=5001
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 13]
+sStatus=not used
+sExternalEncoder=None
+sDriveName=Sample Lift
+iDriveNo=0
+sDriveUnit=deg.
+sDriveControl=Firmware
+fReferencePosition=0
+fLowerLimit=0
+fUpperLimit=0
+iMotorType=1
+fTranslate=0.5
+fMechanicalGear=1
+fEncoderCounts=1
+fSlowSpeed=10
+fFastSpeed=100
+fFullSteps=200
+iMicroSteps=50
+fAccelerationTime=1
+fPhaseCurrent=0
+iPositioningError=0
+fResolution=0.0001
+iFWManualDriveNumber=0
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=38
+uConfB=0
+uConfX=5001
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 14]
+sStatus=used
+sExternalEncoder=None
+sDriveName=Zoom
+iDriveNo=8
+sDriveUnit=mm
+sDriveControl=Software
+fReferencePosition=0.85
+fLowerLimit=1
+fUpperLimit=7
+iMotorType=1
+fTranslate=0.277778
+fMechanicalGear=1.8
+fEncoderCounts=1
+fSlowSpeed=0.2
+fFastSpeed=1
+fFullSteps=200
+iMicroSteps=50
+fAccelerationTime=1
+fPhaseCurrent=2
+iPositioningError=0
+fResolution=0.0009
+iFWManualDriveNumber=8
+sFWManualDriveName=Zoom
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=500
+fBacklash=0
+fSlowdown=0
+uConfA=A30
+uConfB=0
+uConfX=9260
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 15]
+sStatus=not used
+sExternalEncoder=None
+sDriveName=
+iDriveNo=0
+sDriveUnit=deg.
+sDriveControl=Software
+fReferencePosition=0
+fLowerLimit=0
+fUpperLimit=0
+iMotorType=1
+fTranslate=0.5
+fMechanicalGear=1
+fEncoderCounts=1
+fSlowSpeed=10
+fFastSpeed=100
+fFullSteps=200
+iMicroSteps=50
+fAccelerationTime=1
+fPhaseCurrent=0
+iPositioningError=0
+fResolution=0.0001
+iFWManualDriveNumber=0
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=38
+uConfB=0
+uConfX=5001
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 16]
+sStatus=not used
+sExternalEncoder=None
+sDriveName=
+iDriveNo=0
+sDriveUnit=deg.
+sDriveControl=Software
+fReferencePosition=0
+fLowerLimit=0
+fUpperLimit=0
+iMotorType=1
+fTranslate=0.5
+fMechanicalGear=1
+fEncoderCounts=1
+fSlowSpeed=10
+fFastSpeed=100
+fFullSteps=200
+iMicroSteps=50
+fAccelerationTime=1
+fPhaseCurrent=0
+iPositioningError=0
+fResolution=0.0001
+iFWManualDriveNumber=0
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=38
+uConfB=0
+uConfX=5001
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 17]
+sStatus=not used
+sExternalEncoder=None
+sDriveName=
+iDriveNo=0
+sDriveUnit=deg.
+sDriveControl=Software
+fReferencePosition=0
+fLowerLimit=0
+fUpperLimit=0
+iMotorType=1
+fTranslate=0.5
+fMechanicalGear=1
+fEncoderCounts=1
+fSlowSpeed=10
+fFastSpeed=100
+fFullSteps=200
+iMicroSteps=50
+fAccelerationTime=1
+fPhaseCurrent=0
+iPositioningError=0
+fResolution=0.0001
+iFWManualDriveNumber=0
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=38
+uConfB=0
+uConfX=5001
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 18]
+sStatus=not used
+sExternalEncoder=None
+sDriveName=
+iDriveNo=0
+sDriveUnit=deg.
+sDriveControl=Software
+fReferencePosition=0
+fLowerLimit=0
+fUpperLimit=0
+iMotorType=1
+fTranslate=0.5
+fMechanicalGear=1
+fEncoderCounts=1
+fSlowSpeed=10
+fFastSpeed=100
+fFullSteps=200
+iMicroSteps=50
+fAccelerationTime=1
+fPhaseCurrent=0
+iPositioningError=0
+fResolution=0.0001
+iFWManualDriveNumber=0
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=38
+uConfB=0
+uConfX=5001
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 19]
+sStatus=not used
+sExternalEncoder=None
+sDriveName=Sample Swing
+iDriveNo=0
+sDriveUnit=deg.
+sDriveControl=Firmware
+fReferencePosition=0
+fLowerLimit=0
+fUpperLimit=0
+iMotorType=1
+fTranslate=0.5
+fMechanicalGear=1
+fEncoderCounts=1
+fSlowSpeed=10
+fFastSpeed=100
+fFullSteps=200
+iMicroSteps=50
+fAccelerationTime=1
+fPhaseCurrent=0
+iPositioningError=0
+fResolution=0.0001
+iFWManualDriveNumber=0
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=38
+uConfB=0
+uConfX=5001
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[Drive 20]
+sStatus=not used
+sExternalEncoder=None
+sDriveName=Rotary Absorber
+iDriveNo=0
+sDriveUnit=deg.
+sDriveControl=Software
+fReferencePosition=0
+fLowerLimit=0
+fUpperLimit=0
+iMotorType=1
+fTranslate=0.0569476
+fMechanicalGear=8.78
+fEncoderCounts=1
+fSlowSpeed=3600
+fFastSpeed=10800
+fFullSteps=24
+iMicroSteps=20
+fAccelerationTime=0.2
+fPhaseCurrent=0.25
+iPositioningError=0
+fResolution=0.0182917
+iFWManualDriveNumber=0
+sFWManualDriveName=
+fMotorPulsesPerUnit=10000
+fMoveLimit=10
+iHomemarkReference=0
+fBiasCurrent=50
+fBiasDelay=250
+fBacklash=0
+fSlowdown=0
+uConfA=30
+uConfB=0
+uConfX=5001
+fCCP=5
+fCCI=0.02
+fProportionalGain=0
+fIntegralGain=0
+fDerivativeGain=0
+fAccForwardGain=0
+fVeloForwardGain=0
+fOutputScaleFactor=0
+fIntegrationLimit=0
+fSettleWindow=0
+fSettleTime=0
+
+[UMCB-Drive 1]
+sStatus=not used
+sName=Sample Carriage
+sDriveType=Magnet
+iPower=0
+iOperatingCur=0
+iDemagCur=0
+fDemagTime1=0
+fDemagTime2=
+iPolarity=0
+sRefSwitchActiveAt=low level
+sPosSwitchActiveAt=low level
+sLimitSwitchActiveAt=low level
+sMotorDirection=normal
+
+[UMCB-Drive 2]
+sStatus=not used
+sName=Sample Pickup
+sDriveType=Magnet
+iPower=0
+iOperatingCur=0
+iDemagCur=0
+fDemagTime1=0
+fDemagTime2=
+iPolarity=0
+sRefSwitchActiveAt=low level
+sPosSwitchActiveAt=low level
+sLimitSwitchActiveAt=low level
+sMotorDirection=normal
+
+[UMCB-Drive 3]
+sStatus=not used
+sName=
+sDriveType=Magnet
+iPower=0
+iOperatingCur=0
+iDemagCur=0
+fDemagTime1=0
+fDemagTime2=
+iPolarity=0
+sRefSwitchActiveAt=low level
+sPosSwitchActiveAt=low level
+sLimitSwitchActiveAt=low level
+sMotorDirection=normal
+
+[UMCB-Drive 4]
+sStatus=not used
+sName=
+sDriveType=Magnet
+iPower=0
+iOperatingCur=0
+iDemagCur=0
+fDemagTime1=0
+fDemagTime2=
+iPolarity=0
+sRefSwitchActiveAt=low level
+sPosSwitchActiveAt=low level
+sLimitSwitchActiveAt=low level
+sMotorDirection=normal
+
+[UMCB-Drive 5]
+sStatus=not used
+sName=
+sDriveType=Magnet
+iPower=0
+iOperatingCur=0
+iDemagCur=0
+fDemagTime1=0
+fDemagTime2=
+iPolarity=0
+sRefSwitchActiveAt=low level
+sPosSwitchActiveAt=low level
+sLimitSwitchActiveAt=low level
+sMotorDirection=normal
+
+[UMCB-Drive 6]
+sStatus=not used
+sName=
+sDriveType=Magnet
+iPower=0
+iOperatingCur=0
+iDemagCur=0
+fDemagTime1=0
+fDemagTime2=
+iPolarity=0
+sRefSwitchActiveAt=low level
+sPosSwitchActiveAt=low level
+sLimitSwitchActiveAt=low level
+sMotorDirection=normal
+
+[UMCB-Drive 7]
+sStatus=not used
+sName=
+sDriveType=Magnet
+iPower=0
+iOperatingCur=0
+iDemagCur=0
+fDemagTime1=0
+fDemagTime2=
+iPolarity=0
+sRefSwitchActiveAt=low level
+sPosSwitchActiveAt=low level
+sLimitSwitchActiveAt=low level
+sMotorDirection=normal
+
+[UMCB-Drive 8]
+sStatus=not used
+sName=
+sDriveType=Magnet
+iPower=0
+iOperatingCur=0
+iDemagCur=0
+fDemagTime1=0
+fDemagTime2=
+iPolarity=0
+sRefSwitchActiveAt=low level
+sPosSwitchActiveAt=low level
+sLimitSwitchActiveAt=low level
+sMotorDirection=normal
+
+[IK 121 1]
+sStatus=not used
+sBaseAddress=
+sDrive1=
+iLines1=36000
+sDrive2=
+iLines2=36000
+
+[IK 121 2]
+sStatus=not used
+sBaseAddress=
+sDrive1=
+iLines1=36000
+sDrive2=
+iLines2=36000
+
+[Serial Encoder 1]
+sStatus=not used
+iComPort=0
+iLines=0
+sDrive=
+
+[Io-Lines]
+sLine1Out=
+sLine1In=
+sLine2Out=
+sLine2In=
+sLine3Out=
+sLine3In=
+sLine4Out=
+sLine4In=
+sLine5Out=
+sLine5In=
+sLine6Out=
+sLine6In=
+sLine7Out=
+sLine7In=
+sLine8Out=
+sLine8In=
+sLine9Out=
+sLine9In=
+sLine10Out=
+sLine10In=
+sLine11Out=
+sLine11In=
+sLine12Out=
+sLine12In=
+sLine13Out=
+sLine13In=
+sLine14Out=
+sLine14In=
+sLine15Out=
+sLine15In=
+sLine16Out=
+sLine16In=
+
+[Temperature Controller]
+sStatus=used
+sStage=Paar DCS 350
+sController=Eurotherm
+sSensor=Type K, NiCr/NiAl
+sBinFile=
+sUnits=Celsius
+fMaxTemp=350
+fMinTemp=-100
+fMaxHeatingSpeed=0.1
+fWaterTimeout=0
+iVacuumCheck=0
+fErrorwindowfortempctrl=1
+sIsHumidityController=no
+fMinHumidity=10
+fMaxHumidity=90
+fMinHumTemp=30
+fMaxHumTemp=90
+fHumDetectionWindow=10
+fStandbyDelay=0
+fStandbyTemperature=25
+
+[Ansyco Calibration]
+sUsed=not used
+fRatioStart=0
+fRatioIncrement=0.05
+fWaterTempOffset=3
+fWaterDetectionWindow=2
+sAvailableTemperatures=
+
+[Ag Wavelength]
+fAlphaAverage=0.56084
+fAlpha1=0.55941
+fAlpha2=0.5638
+fBeta=0.49707
+fAlphaRatio=0.5
+
+[Co Wavelength]
+fAlphaAverage=1.79026
+fAlpha1=1.78897
+fAlpha2=1.79285
+fBeta=1.62079
+fAlphaRatio=0.5
+
+[Cr Wavelength]
+fAlphaAverage=2.291
+fAlpha1=2.2897
+fAlpha2=2.29361
+fBeta=2.08487
+fAlphaRatio=0.5
+
+[Cu Wavelength]
+fAlphaAverage=1.54184
+fAlpha1=1.5406
+fAlpha2=1.54439
+fBeta=1.39222
+fAlphaRatio=0.5
+
+[Fe Wavelength]
+fAlphaAverage=1.93735
+fAlpha1=1.93604
+fAlpha2=1.93998
+fBeta=1.75661
+fAlphaRatio=0.5
+
+[Mo Wavelength]
+fAlphaAverage=0.71073
+fAlpha1=0.7093
+fAlpha2=0.71359
+fBeta=0.63229
+fAlphaRatio=0.5
+
+[Ni Wavelength]
+fAlphaAverage=1.65919
+fAlpha1=1.65791
+fAlpha2=1.66175
+fBeta=1.50014
+fAlphaRatio=0.5
+
+[W Wavelength]
+fAlphaAverage=0.2106
+fAlpha1=0.20899
+fAlpha2=0.21381
+fBeta=0.18436
+fAlphaRatio=0.5
+
+[Other1 Wavelength]
+fAlphaAverage=0
+fAlpha1=0
+fAlpha2=0
+fBeta=0
+fAlphaRatio=0
+sElement=
+
+[Other2 Wavelength]
+fAlphaAverage=0
+fAlpha1=0
+fAlpha2=0
+fBeta=0
+fAlphaRatio=0
+sElement=
+
+[Computer Port 1]
+sStatus=not used
+
+[Computer Port 2]
+sStatus=not used
+
+[Computer Port 3]
+sStatus=used
+sDeviceName=TC
+iBaud=9600
+iBits=7
+sParity=Even
+iStopBits=1
+sFlow=None
+
+[Computer Port 4]
+sStatus=not used
+
+[Computer Port 5]
+sStatus=not used
+
+[Computer Port 6]
+sStatus=not used
+
+[Computer Port 7]
+sStatus=not used
+
+[Computer Port 8]
+sStatus=not used
+
+[Computer Port Assignments]
+sDiffractometerControl=TCP1
+sFDControl=none
+sTempControl=COM3
+sHeidenhainControl=none
+sGeneratorControl=integrated
+sWaferRobotControl=none
+sPSDControl=TCP2
+sAutoLoadSocabim=no
+
+[TCP Device 1]
+sDeviceName=D8+X-ray Gen.
+sStatus=used
+sAddress=192.168.23.2
+iPort=4251
+
+[TCP Device 2]
+sDeviceName=PSD
+sStatus=used
+sAddress=192.168.23.2
+iPort=4250
+
+[Measurement Server]
+sMeasResumeAllowed=1
+sFailedDeviceVerifIsError=1
+
+[Wafer Robot]
+sStatus=not used
+iChuckVacuumValvePos1=9
+iChuckVacuumValvePos2=10
+iChuckVacuumSensor=14
+sRobotParkStation=P
+sChuckStation=Z
+fExchange2Theta=0
+fExchangeTheta=0
+fExchangeChi=0
+fExchangePhi=0
+fExchangeX=0
+fExchangeY=0
+fExchangeZ=0
+
+[Magazine Grid 0]
+bDownloaded=0
+bCalibrated=0
+fXPosSample1=0
+fYPosSample1=0
+iCols=1
+iRows=1
+fDistBetwCols=0
+fDistBetwRows=0
+fSampleDiameter=0
+sExcludedPositions=
+sReservedPositions=
+sAXSCOMPositions=
+fRefSampleHeight=0
+iStartCol_0=1
+iEndCol_0=1
+sSampleHeight_0=AUTO
+
+[Magazine Area 1]
+sName=AREA1
+fXPosSample1=0
+fYPosSample1=0
+fZPosSample1=0
+iCols=1
+iRows=1
+fDistBetwCols=0
+fDistBetwRows=0
+sGrabber=
+sSampleCup=
+sExcludedPositions=
+sReservedPositions=
+sAXSCOMPositions=
+
+[Slit Changer 1]
+sStatus=not used
+
+[Absorber 1]
+sStatus=not used
+sType=None
+
+[Diffracted Beam Optic 3]
+sStatus=not used
+sName=PathFinder
+sOffsetDrive=2Theta
+iNumBeamPaths=2
+sBeampath1=Variable Slit
+fOffset1=0
+sBeampath2=Triple Ge220 Analyzer
+fOffset2=0
+
+[Universal IO-Board]
+sBaseAddress=100
+sTerminalName=QTERMII
+iFanSetPoint=0
+sSlitName=None
+sTubeWindowName=Low Speed Shutter
+sGeneratorName=K780
+
+[Two Axis Indexer Board 1]
+sStatus=used
+sBaseAddress=560
+iPower=24
+sDrive1=Theta
+sDrive2=2Theta
+
+[Two Axis Indexer Board 2]
+sStatus=not used
+sBaseAddress=
+iPower=24
+sDrive1=None
+sDrive2=None
+
+[Two Axis Indexer Board 3]
+sStatus=not used
+sBaseAddress=
+iPower=24
+sDrive1=None
+sDrive2=None
+
+[Two Axis Indexer Board 4]
+sStatus=not used
+sBaseAddress=
+iPower=24
+sDrive1=None
+sDrive2=None
+
+[Four Axis Indexer Board 1]
+sStatus=used
+sBaseAddress=960
+iPower=24
+sDrive1=X-Drive
+sDrive2=Y-Drive
+sDrive3=Z-Drive
+sDrive4=AUX1
+
+[Four Axis Indexer Board 2]
+sStatus=used
+sBaseAddress=980
+iPower=24
+sDrive1=Phi
+sDrive2=Chi
+sDrive3=Divergence Slit
+sDrive4=Antiscattering Slit
+
+[Four Axis Indexer Board 3]
+sStatus=not used
+sBaseAddress=
+iPower=24
+sDrive1=None
+sDrive2=None
+sDrive3=None
+sDrive4=None
+
+[Four Axis Indexer Board 4]
+sStatus=not used
+sBaseAddress=
+iPower=24
+sDrive1=None
+sDrive2=None
+sDrive3=None
+sDrive4=None
+
+[Universal MC Board 1]
+sStatus=not used
+sBaseAddress=
+sDrive1=None
+sDrive2=None
+sDrive3=None
+sDrive4=None
+sDrive5=None
+sDrive6=None
+sDrive7=None
+sDrive8=None
+
+[Universal MC Board 2]
+sStatus=not used
+sBaseAddress=
+sDrive1=None
+sDrive2=None
+sDrive3=None
+sDrive4=None
+sDrive5=None
+sDrive6=None
+sDrive7=None
+sDrive8=None
+
+[PSD Controller]
+sTopology=Network
+sSerialParamConf=Auto
+iTCPControlPort=4250
+sSupportDeviceBrowsing=1
+iUDPBrowsePort=4245
+sSerialProxy0=4251,1
+sSerialProxy1=4252,2
+sHTTPService=yes
+sINETDService=no
+sHostAccessControl=no
+sAddressAssignment=STATIC
+sIPAddress=192.168.23.2
+sNetMask=255.255.255.0
+sGateway=0.0.0.0
+sAssignHostname=no
+sHostname=
+sHTTPUserName1=user
+sHTTPUserPassword1=UjuOF6KOFXulA
+sHTTPUserStatus1=yes
+sHTTPUserService1=yes
+

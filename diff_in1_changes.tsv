@@ -1,0 +1,26 @@
+Section	Parameter	Old Value	New Value	Notes
+Water Cooling Unit	fXFlowSensorConversionFactor	0.0028	0.0029	
+Detector 1 (Scintillation)	fHighVoltage	822.6	679.2	Significant change, verify photopeak
+Detector 1 (Scintillation)	fDiscrim1LowerLevel	0.788	0.298	
+Detector 1 (Scintillation)	fDiscrim1WindowWidth	1.078	1.176	
+Drive 1 (Theta)	fReferencePosition	19.8658	20.1178	
+Drive 1 (Theta)	fLowerLimit	-2	-5	Extended negative range
+Drive 1 (Theta)	fUpperLimit	60	66	
+Drive 1 (Theta)	fFastSpeed	400	200	
+Drive 2 (2Theta)	fReferencePosition	23.3148	22.4031	
+Drive 2 (2Theta)	fLowerLimit	-2	-10	
+Drive 2 (2Theta)	fUpperLimit	120.1	120.1	PRESERVED per your instruction (DEVICE.INI had 66)
+Drive 3 (Phi)	fLowerLimit	-190	-360	
+Drive 3 (Phi)	fUpperLimit	190	360	
+Drive 5 (X-Drive)	fReferencePosition	-41.438	41.049	SIGN FLIPPED, verify motion direction
+Drive 5 (X-Drive)	fSlowSpeed	5	2	
+Drive 5 (X-Drive)	uConfX	9360	9560	
+Drive 6 (Y-Drive)	fReferencePosition	-40.618	41.023	SIGN FLIPPED, verify motion direction
+Drive 6 (Y-Drive)	fSlowSpeed	5	2	
+Drive 6 (Y-Drive)	uConfX	9360	9560	
+Drive 7 (Z-Drive)	fReferencePosition	-1.2712	-2.1713	
+Drive 7 (Z-Drive)	fLowerLimit	-1.6	-2	
+Drive 7 (Z-Drive)	fUpperLimit	2.6	3	
+Drive 7 (Z-Drive)	fFastSpeed	1	0.2	
+Drive 7 (Z-Drive)	fAccelerationTime	0.2	0.6	
+Drive 7 (Z-Drive)	fMoveLimit	10	5	
