@@ -21,6 +21,7 @@ were considered and deliberately not applied.
 | `CurrentBootdisk/` | Dated capture of the current working boot disk |
 | `diff_in1.cnf` and variants | Controller configuration, with `-original` and `-edit` forms |
 | `diff_in1_changes*` | Change record in Markdown, TSV, and Excel |
+| `alignment_repair.md` | Alignment diagnosis, repair procedure, and measurement record |
 
 Suffix conventions in use: `-original` for the state before edits, `-edit` for a
 working copy, `-wont-boot` for a known-bad variant kept deliberately as a
