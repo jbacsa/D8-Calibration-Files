@@ -22,6 +22,8 @@ were considered and deliberately not applied.
 | `diff_in1.cnf` and variants | Controller configuration, with `-original` and `-edit` forms |
 | `diff_in1_changes*` | Change record in Markdown, TSV, and Excel |
 | `alignment_repair.md` | Alignment diagnosis, repair procedure, and measurement record |
+| `HANDOVER.md` | Current state of open work, next steps, and a starter prompt for resuming |
+| `alignment_report_*.docx` | Word summary of the alignment review, for sharing |
 
 Suffix conventions in use: `-original` for the state before edits, `-edit` for a
 working copy, `-wont-boot` for a known-bad variant kept deliberately as a
