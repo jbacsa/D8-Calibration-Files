@@ -4,8 +4,10 @@ Handoff record for restoring the angular zeros and sample height. Update the
 status line and the record tables as work proceeds, and keep superseded entries
 rather than deleting them.
 
-**Status (2026-09-30):** file diagnosis complete. The configuration has not yet
-been regenerated and the zeros have not yet been measured. The latest alignment
+**Status (2026-09-30):** file diagnosis complete. The scintillation counter is
+giving unreliable results, so the zeros are to be set with the VANTEC for now
+(see "Interim alignment with the VANTEC"). The configuration has not yet been
+regenerated and the zeros have not yet been measured. The latest alignment
 results, saved on the instrument PC, have not yet been reviewed here.
 
 ## Instrument
@@ -57,6 +59,14 @@ and discriminator values. The fault is therefore on the controller side: the PC
 offers 0D and the controller cannot supply it. The boot-disk file's header
 reads "Scintillation and Vantec Detectors", but the file contains neither
 detector section.
+
+This is the first suspect for the unreliable counter results reported on
+2026-09-30. The firmware takes the counter's HV, amplifier gain, pulse shaping
+and discriminator settings from `[CHANNEL1]`, and initializes its interface
+board at the address given in `[DIB1]`. If that board does not respond, the
+firmware reports `Initialization of Detector-Interface-Board (I/O Base Address
+0x0140) failed!`. Without these sections the controller has no settings for the
+counter at all.
 
 ### 2. Reference positions differ in every capture
 
@@ -229,14 +239,69 @@ Si (a = 5.43114 Å) with Co Kα1 = 1.78897 Å:
 | 2θ Kα1 (°) | 33.149 | 55.528 | 66.218 | 82.414 | 91.761 | 107.577 |
 | Kα2 offset from Kα1 (°) | 0.074 | 0.131 | 0.162 | 0.218 | 0.257 | 0.340 |
 
+## Interim alignment with the VANTEC
+
+The scintillation counter's results cannot be trusted at present (2026-09-30),
+so the zeros are set with the VANTEC until it is fixed. This departs from the
+skill's rule of restoring 0D before zeroing, and the cost is specific: the
+VANTEC cannot separate the 2θ drive zero from its own reference-channel offset.
+Everything else can be done properly.
+
+Check the configuration first (finding 1). If the floppy `DEVICE.INI` has no
+`[DIB1]` and `[CHANNEL1]`, step 1 of the repair procedure may restore the
+counter, and 0D with it.
+
+The VANTEC is a gas detector, so keep the direct beam heavily attenuated and the
+count rate well inside its linear range. A flat-topped or dented beam profile
+means it is saturating.
+
+**V1. Check the PSD calibration.** With the sample removed, θ at 0 and the
+absorber in, take fixed-mode snapshots of the direct beam with only the detector
+moved, to 2θ = -2, -1, 0, +1 and +2°. Fit the beam position in each. The beam
+itself does not move, so all five should report the same position within about
+0.005°, and a 1D scan through the beam should be about as narrow as a snapshot.
+A drift with detector position, or a broadened scan, means the channel mapping
+does not match the detector. That is possible here, because the CNF and the
+VANTEC's own file hold different TDC settings and calibrations (finding 6).
+Resolve it before setting any zero, and do not compensate with `fZeroOffset1`.
+Record the 2θ = 0 position before correcting anything. It is comparable with
+the direct-beam column of the prediction table if the PSD offset is right.
+
+**V2. Set Z and θ with the VANTEC as a counter.** Run the half-cut and rocking
+scans of step 4 until they converge, summing the counts in the beam rather than
+reading its position. For the rocking scan, sum over a region wide enough to
+keep the moving beam inside it. These scans measure intensity only, so they do
+not depend on the PSD calibration, and the θ and Z columns of the prediction
+table apply unchanged.
+
+**V3. Set the combined 2θ zero.** Remove the knife edge, return θ and 2θ to 0,
+and take a snapshot. With the tube zero set, the reported beam position is the
+detector-side zero: the drive reference plus the PSD offset. Put all of it on
+the 2θ drive. For example, if the beam reports at +0.030°, redefine the current
+2θ of 0 as -0.030° on the Positioning Drives page, then confirm that the beam
+reports 0. Record the value as combined. The drive is the better place for it
+(see "Changes considered and not made", item 6).
+
+**V4. Persist and verify.** Steps 5 and 6 apply, measured with the VANTEC in
+1D. On the Si standard, a constant residual is a remaining 2θ zero error, and
+one that scales with cos θ is a height error.
+
+**V5. Split the zero when the counter is back.** Fix the counter's
+configuration and photopeak (steps 1 and 2), then scan the direct beam once in
+0D. If it sits at 0 within 0.005°, the combined zero was all drive and nothing
+more is needed. Otherwise the difference belongs to the PSD: correct the drive
+by the 0D offset, adjust the PSD offset through D8 Config until the VANTEC again
+reports the direct beam at 0, and confirm that both detectors agree.
+
 ## Checking alignment results
 
 Results from any alignment session make sense if they pass these tests.
 
-1. **Measured in 0D.** If the controller file still lacks `[DIB1]`, the zeros
-   were set with the VANTEC, and the 2θ zero includes the detector
-   reference-channel offset. Such a result cannot separate the two and should
-   be repeated after step 1.
+1. **Measured in 0D.** If the counter was not used, the 2θ zero includes the
+   detector reference-channel offset and is a combined value. That is
+   acceptable for VANTEC work if it was recorded as combined, as in the interim
+   section. Otherwise it has to be split once 0D works. The θ and Z results are
+   unaffected.
 2. **Read against the references loaded at the time.** An offset reads as
    loaded reference minus correct reference, as long as no reference switch has
    moved. With the boot-disk references loaded, each earlier capture predicts a
@@ -284,11 +349,20 @@ Fill in at the instrument.
 
 ### Reference positions
 
-| Drive | On floppy before | Measured offset | After | After power cycle |
-| --- | --- | --- | --- | --- |
-| TH-Detector | | | | |
-| TH-Tube | | | | |
-| Z | | | | |
+| Drive | On floppy before | Measured offset | Detector used | After | After power cycle |
+| --- | --- | --- | --- | --- | --- |
+| TH-Detector | | | | | |
+| TH-Tube | | | | | |
+| Z | | | | | |
+
+Mark a TH-Detector offset set with the VANTEC as combined (drive plus PSD
+offset).
+
+### VANTEC direct-beam snapshots (interim step V1)
+
+| Detector 2θ (°) | -2 | -1 | 0 | +1 | +2 |
+| --- | --- | --- | --- | --- | --- |
+| Reported beam position (°) | | | | | |
 
 ### Verification
 
@@ -313,11 +387,20 @@ Fill in at the instrument.
    archive keeps each file as captured.
 5. **Changing the VANTEC calibration or `fZeroOffset1`.** A 1D offset can only
    be attributed to the detector once the 0D zeros are set.
+6. **Putting the combined VANTEC 2θ zero into the PSD offset instead of the
+   drive.** The archive shows hand edits and disagreement in the drive
+   references, while `fZeroOffset1` is unchanged since 2006, so the drive is the
+   likelier source of the error. Correcting the drive also leaves the PSD block
+   alone, as the skill requires, and the 0D scan in step V5 moves any PSD share
+   across later.
 
 ## Open questions
 
 - Which `DEVICE.INI` is on the floppy now, and which references were loaded when
   the latest results were taken?
+- Does the floppy `DEVICE.INI` have `[DIB1]` and `[CHANNEL1]`? If it does, does
+  the controller report a Detector-Interface-Board initialization failure at
+  boot?
 - Are the divergence slit, antiscatter slit and zoom motors installed?
 - What do the `ED00` and `0100` settings of `CONF_B` select on the tube axis?
 - Where is `fThetaFZeroOffset` kept, and has it changed?
